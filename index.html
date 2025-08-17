@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Renewable Energy</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <header class="header header_full_height">
+      <nav class="navbar navbar_full">
+        <ul>
+          <li><a href="#Inicio">Inicio</a></li>
+          <li><a href="#Dashboard">Dashboard</a></li>
+          <li><a href="index.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="contexto" id="Inicio">
+        <div class="introduccion">
+          <div class="renewable_sources">
+            <h2>Fuentes de Energía Renovable</h2>
+            <p>
+              Descubre las principales tecnologías que impulsan un futuro
+              sostenible. Cada fuente tiene un papel clave en la transición
+              energética global. Pasa el mouse sobre una tarjeta o haz clic/toca
+              en ella para obtener más información.
+            </p>
+            <div class="arrow-container">
+              <span class="arrow"></span>
+            </div>
+          </div>
+
+          <div class="intro_calculator">
+            <h1>¿Cuánta enegía de fuentes renovable necesitas?</h1>
+            <p>
+              ¿Alguna vez te has preguntado cómo se compara tu consumo de
+              energía con el de las fuentes de energía renovables?
+            </p>
+            <button onclick="scrollToCalculator()">¡Entérate ahora!</button>
+          </div>
+        </div>
+
+        <div class="flashcards">
+          <!-- Eólica -->
+          <div class="flashcard">
+            <div class="card-front">
+              <h3>Eólica</h3>
+              <img src="/img/eolica.png" alt="Energía Eólica" />
+            </div>
+            <div class="card-back">
+              <p>
+                Aprovecha la fuerza del viento para generar electricidad a
+                través de turbinas. Es una de las formas más limpias y
+                sostenibles de producir energía.
+              </p>
+            </div>
+          </div>
+
+          <!-- Solar -->
+          <div class="flashcard">
+            <div class="card-front">
+              <h3>Solar</h3>
+              <img src="/img/solar.png" alt="Energía Solar" />
+            </div>
+            <div class="card-back">
+              <p>
+                Utiliza paneles solares para captar la radiación solar y
+                convertirla en electricidad o calor. Es una fuente inagotable y
+                versátil.
+              </p>
+            </div>
+          </div>
+
+          <!-- Biocombustible -->
+          <div class="flashcard">
+            <div class="card-front">
+              <h3>Biocombustible</h3>
+              <img src="/img/biocombustible.png" alt="Biocombustible" />
+            </div>
+            <div class="card-back">
+              <p>
+                Genera energía a partir de materiales orgánicos como residuos
+                agrícolas o forestales. Es una opción renovable que reduce el
+                uso de combustibles fósiles.
+              </p>
+            </div>
+          </div>
+
+          <!-- Hidroeléctrica -->
+          <div class="flashcard">
+            <div class="card-front">
+              <h3>Hidroeléctrica</h3>
+              <img src="/img/hidroelectrica.png" alt="Hidroeléctrica" />
+            </div>
+            <div class="card-back">
+              <p>
+                Emplea la fuerza del agua en movimiento, como ríos o embalses,
+                para generar electricidad. Es una fuente constante y eficiente.
+              </p>
+            </div>
+          </div>
+
+          <!-- Geotérmica -->
+          <div class="flashcard">
+            <div class="card-front">
+              <h3>Geotérmica</h3>
+              <img src="/img/geotermica.png" alt="Energía Geotérmica" />
+            </div>
+            <div class="card-back">
+              <p>
+                Aprovecha el calor interno de la Tierra para generar energía. Es
+                ideal en regiones con actividad volcánica o geotérmica.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+      <div class="divider_horizontal_calculator_top"></div>
+      <div class="dividercalc">
+        <h3>Calculadora</h3>
+        <!-- <p>Modalidad</p> -->
+      </div>
+      <div class="divider_horizontal_calculator_bottom"></div>
+      
+      <section class="calculator-section" id="calculator">
+
+        <div class="calculator">
+          <h1>¡Estima tu consumo en energías renovables!</h1>
+          <p>
+            Ingrese la cantidad de vatios que consume para estimar su equivalente de energía renovable.
+          </p>
+          <form id="energyForm">
+            <label for="watts">Vatios Consumidos:</label>
+            <input type="number" id="watts" placeholder=" Ej. 1500" name="watts" min="0" required />
+            <button type="submit">Calcular</button>
+          </form>
+          <div id="result" class="result-visual"></div>
+        </div>
+        <div class="equivalences">
+          <h2>Equivalencias de Energía</h2>
+          <ul>
+            <li><strong>Solar:</strong> 1 panel solar genera aproximadamente 400 W en promedio en condiciones óptimas de luz solar.</li>
+            <li><strong>Eólica:</strong> 1 turbina eólica pequeña produce alrededor de 2000 W bajo condiciones de viento moderadas.</li>
+            <li><strong>Hidroeléctrica:</strong> Una microcentral hidroeléctrica genera en promedio 10,000 W, dependiendo del caudal y desnivel del agua.</li>
+            <li><strong>Biocombustible:</strong> 1 litro de biocombustible (como biodiésel o etanol) produce aproximadamente 30 W de energía cuando se quema.</li>
+            <li><strong>Geotérmica:</strong> Una planta geotérmica pequeña genera cerca de 5000 W, extrayendo calor del interior de la Tierra.</li>
+          </ul>
+          
+        </div>
+        
+      </section>
+      
+
+      <section id="Dashboard" class="Dashboard">
+        <div class="divider_horizontal_dashboard_top"></div>
+        <div class="divider">
+          <h3>Dashboard</h3>
+          <!-- <p>Modalidad</p> -->
+        </div>
+        <div class="divider_horizontal_dashboard_bottom"></div>
+        <div class="chart-container1">
+
+          <div class="doughnut-chart">
+            <canvas id="doughnut_chart_render"></canvas>
+          </div>
+
+          <div class="bar-chart">
+            <canvas id="bar_chart_render"></canvas>
+          </div>
+      </div>
+          <div class="chart-container2">
+
+          <div class="line-chart">
+            <canvas id="line_chart_render"></canvas>
+          </div>
+
+          <div class="area-chart">
+            <canvas id="area_chart_render"></canvas>
+          </div>
+        </div>
+        </div>
+      </section>
+
+
+
+
+      
+    </main>
+
+    <footer>
+      <div class="divider_horizontal_footer"></div>
+      <p>
+        Transición Energética 2024 © - Comprometidos con un futuro sostenible. |
+        Política de Privacidad | Términos y Condiciones
+      </p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
